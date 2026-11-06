@@ -45,6 +45,15 @@ app.get("/keiyo_add", (req, res) => {
   res.redirect('/keiyo');
 });
 
+app.get("/cit_add", (req, res) => {
+  let id = req.query.id;
+  let code = req.query.Faculty;
+  let name = req.query.Dept;
+  let newdata = { id: id, Faculty:code , Dept:name };
+  department.push( newdata );
+  res.redirect('/cit');
+});
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";

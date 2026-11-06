@@ -11,6 +11,14 @@ app.use("/public", express.static(__dirname + "/public"));
   { id:4, code:"JE13", name:"幕張豊砂駅"},
   { id:5, code:"JE14", name:"海浜幕張駅"},
   { id:6, code:"JE05", name:"新浦安駅"},
+ ];
+
+  let department = [
+  { id:1, Faculty:"情報変革科", Dept:"情報工学部"},
+  { id:2, Faculty:"情報変革科", Dept:"認知情報科学科"},
+  { id:3, Faculty:"情報変革科", Dept:"高度応用情報科学科"},
+  { id:4, Faculty:"先進工学部", Dept:"知能メディア工学科"},
+  { id:5, Faculty:"先進工学部", Dept:"生命科学科"},
 ];
 
 app.get("/keiyo", (req, res) => {
@@ -21,6 +29,11 @@ app.get("/keiyo", (req, res) => {
 app.get("/keiyo2", (req, res) => {
   // 本来ならここにDBとのやり取りが入る
   res.render('db2', { data: station });
+});
+
+app.get("/cit", (req, res) => {
+  // 本来ならここにDBとのやり取りが入る
+  res.render('db3', { data: department });
 });
 
 app.get("/keiyo_add", (req, res) => {

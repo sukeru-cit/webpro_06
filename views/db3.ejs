@@ -1,0 +1,18 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>千葉工業大学・学部学科</title>
+</head>
+<body>
+  <h2>各学科</h2>
+  <table>
+    <tr><th>ID</th><th>学部</th><th>学科</th></tr>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.id %></td>
+        <td><%= row.Faculty %></td>
+        <td><%= row.Dept %></td></tr>
+      <% } %>
+  </table>
+</body>
+</html>
